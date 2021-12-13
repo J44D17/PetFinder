@@ -1,0 +1,182 @@
+@import url('https://necolas.github.io/normalize.css/8.0.1/normalize.css');
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
+
+
+*{
+    font-family: 'Readex Pro', sans-serif;
+    margin:0;
+    padding:0;
+}
+
+button, input[type="submit"], input[type="reset"] {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+input ,select{
+    outline:none;
+    border:none;
+}
+
+
+:root {
+    --fuente-semibold: 600;
+    --fuente-light: 300;
+    --color-azul:#08354B;
+    --color-gris:#274F63;
+    --color-celeste:#116A96;
+}
+
+
+
+body{
+    background-color:var(--color-azul);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+
+/* BOTON BLANCO */
+
+.boton_blanco {
+    font-size:1.2rem;
+    padding: 0.2rem 3.6rem;
+    border-radius:2rem;
+    background-color:white;
+    font-weight:var(--fuente-semibold);
+    color:var(--color-azul);
+    border: white solid 3px;
+    transition:0.3s;
+}
+ 
+.boton_blanco:hover{
+    background-color:var(--color-azul);
+    color:white;
+}
+
+.boton_blanco:active{
+    background-color:white;
+    color:var(--color-azul);
+}
+
+
+/* BOTON SUBRAYADO */
+
+.boton_subrayado{
+    font-size:1.5rem;
+    font-weight:var(--fuente-semibold);
+    color:white;
+    transition:0.1s;
+}
+    
+.boton_subrayado:hover{
+    text-decoration:underline;
+}
+    
+.boton_subrayado:active{
+    color:gray;
+}
+
+
+
+/* CAMPO TEXTO CON ICONO*/
+
+
+
+.campo_texto, .campo_texto_normal{
+    height:3rem;
+    width:100%;
+
+    display:flex;
+    margin-bottom:0.6rem;
+}
+    
+    
+.campo_texto > div, .campo_texto_normal > div{
+    background-color:var(--color-azul);
+    height:100%;  
+}
+    
+.campo_texto_normal > div{width:2rem;}
+.campo_texto > div{width:4rem;}
+    
+.campo_texto > input[type=text] , .campo_texto_normal > input[type=text]{
+    padding: 0 0.8rem;
+    width:100%;
+    color:white;
+    background-color:rgba(3, 63, 92, 0.68);
+    font-size:1.25rem;
+    font-weight:var(--fuente-light)
+}
+
+.campo_texto > input[type=text]::placeholder , .campo_texto_normal > input[type=text]::placeholder{
+    color:rgb(180, 180, 180);
+}
+    
+.campo_texto > div{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+    
+.campo_texto > div > svg ,.campo_texto > div > img{
+    width:40%
+}
+
+
+
+/* OPCION SELECCION */
+
+.opciones_seleccion{
+    width:100%;
+}
+
+.opciones_seleccion > select{
+    border-bottom:2px solid white;
+    background-color:rgba(255, 255, 255, 0);
+    font-size:1.25rem;
+    width:100%;
+    font-weight:var(--fuente-light);
+    color:white;
+    margin-bottom:0.2rem;
+    }
+    
+    .opciones_seleccion > select > option{
+    background-color:var(--color-azul);
+    font-weight:var(--fuente-light);
+    }
+    
+    .opciones_seleccion > p{
+    color:white;
+    text-align:right;
+    padding-right:0.2rem;
+    }
+
+    /* IMAGEN POR AGREGAR */
+
+.imagen_por_agregar{
+    width: 9rem;
+    height: 9rem;
+    background-color: rgba(255,255,255,0.8);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.imagen_por_agregar > svg{
+    width:50%;
+}
+
+.imagen_por_agregar > svg:hover{
+    fill:#757575;
+}
+
+.imagen_por_agregar > svg:active{
+    fill:#F4F4F4;
+}
